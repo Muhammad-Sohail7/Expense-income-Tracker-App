@@ -68,12 +68,12 @@ const deleteitem = (event) =>{
     <div className="container" >
 <h1 className="text-center">Expense Tracker</h1>
 
-  <h3>Your Balance <br /> {getIncome() + getExpense()}</h3>
+  <h3>Your Balance <br /> ${getIncome() + getExpense()}.00</h3>
 
 <div className="expense-container">
-  <h3>Income <br /> {getIncome()}</h3>
+  <h3>Income <br /> ${getIncome()}.00</h3>
   
-  <h3>Expense <br /> {getExpense()}</h3>
+  <h3>Expense <br /> ${getExpense()}.00</h3>
 
 </div>
 
@@ -86,7 +86,7 @@ const deleteitem = (event) =>{
                 <span onClick={deleteitem}id={ind}><img src={dusts} alt="maldives" className="img"/></span>
 
                       <span>{transObj.desc}</span>
-                      <span>{transObj.amount}</span>
+                      <span>${transObj.amount}.00</span>
                 </li>
               )
             })}
